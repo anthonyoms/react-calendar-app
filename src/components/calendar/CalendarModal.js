@@ -24,7 +24,7 @@ const customStyles = {
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
-const now = moment().minute(0).second(0).add(1, "hours");
+const now = moment().minutes(0).seconds(0).add(1,'hours');
 const nowPlus1 = now.clone().add(1, "hours");
 
 const initEvent = {
