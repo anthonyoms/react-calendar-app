@@ -1,4 +1,4 @@
-import { types } from "../types/types";
+import { types } from "../consts/types";
 
 export const uiOpenModal = () => ({
   type: types.uiOpenModal,

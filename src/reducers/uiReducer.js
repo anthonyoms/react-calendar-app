@@ -1,4 +1,4 @@
-import { types } from "../types/types";
+import { types } from "../consts/types";
 
 const initialState = {
   modalOpen: false,
