@@ -15,7 +15,7 @@ export const StartLogin = (email, password) => {
     const body = await resp.json();
     if (body.ok) {
       localStorage.setItem("token", body.token);
-      localStorage.setItem("token-init-date,", new Date().getTime());
+      localStorage.setItem("token-init-date", new Date().getTime());
       dispatch(login({ uid: body.uid, name: body.name }));
     } else {
       Swal.fire("Error", body.msg, "error");
@@ -33,7 +33,7 @@ export const startRegister = (email, password, name) => {
     const body = await resp.json();
     if (body.ok) {
       localStorage.setItem("token", body.token);
-      localStorage.setItem("token-init-date,", new Date().getTime());
+      localStorage.setItem("token-init-date", new Date().getTime());
       dispatch(login({ uid: body.uid, name: body.name }));
     } else {
       Swal.fire("Error", body.msg, "error");
@@ -47,7 +47,7 @@ export const startChecking = () => {
     const body = await resp.json();
     if (body.ok) {
       localStorage.setItem("token", body.token);
-      localStorage.setItem("token-init-date,", new Date().getTime());
+      localStorage.setItem("token-init-date", new Date().getTime());
       dispatch(login({ uid: body.uid, name: body.name }));
     } else {
       dispatch(checkingFinish());
@@ -57,7 +57,7 @@ export const startChecking = () => {
 
 const checkingFinish = () => ({ type: types.authCheckingFinish });
 
-const login = (user) => ({
+export const login = (user) => ({
   type: types.authLogin,
   payload: user,
 });
